@@ -41,7 +41,7 @@ public class AddNoteActivity extends NoteBaseActivity {
         Realm realm = Realm.getInstance(this);
 
         Note note = new Note();
-        note.setCreateTimeInMillis(System.currentTimeMillis());
+        note.setCreateTime(System.currentTimeMillis());
 
         note.setText(editText.getText().toString());
 
@@ -50,6 +50,6 @@ public class AddNoteActivity extends NoteBaseActivity {
         realm.commitTransaction();
         realm.close();
 
-        return note.getCreateTimeInMillis();
+        return note.getCreateTime();
     }
 }

@@ -51,7 +51,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteHolder> 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity, EditNoteActivity.class);
-                intent.putExtra(EditNoteActivity.EXTRA_NOTE_ID, note.getCreateTimeInMillis());
+                intent.putExtra(EditNoteActivity.EXTRA_NOTE_ID, note.getCreateTime());
                 activity.startActivity(intent);
             }
         });
@@ -69,6 +69,15 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteHolder> 
 
         @Bind(R.id.title)
         TextView title;
+
+        @Bind(R.id.textDate)
+        TextView date;
+
+        @Bind(R.id.textLabelAdded)
+        TextView labelAdded;
+
+        @Bind(R.id.textLabelEdited)
+        TextView labelEdited;
 
         public NoteHolder(View itemView) {
             super(itemView);

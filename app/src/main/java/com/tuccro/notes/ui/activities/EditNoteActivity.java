@@ -25,7 +25,7 @@ public class EditNoteActivity extends NoteBaseActivity {
         }
 
         Realm realm = Realm.getInstance(this);
-        note = realm.where(Note.class).equalTo("createTimeInMillis", noteId).findFirst();
+        note = realm.where(Note.class).equalTo("createTime", noteId).findFirst();
         fillFields();
     }
 
