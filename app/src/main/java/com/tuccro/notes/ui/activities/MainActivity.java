@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.tuccro.notes.R;
+import com.tuccro.notes.entity.Note;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -67,15 +68,17 @@ public class MainActivity extends AppCompatActivity {
                     final long id = data.getLongExtra(NoteBaseActivity.EXTRA_NOTE_ID, 0);
 
                     Snackbar.make(getCurrentFocus(), "Успех", Snackbar.LENGTH_LONG)
-                            .setAction(android.R.string.cancel, new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if (id != 0) {
+//                            .setAction(android.R.string.cancel, new View.OnClickListener() {
+//                                @Override
+//                                public void onClick(View v) {
+//                                    if (id != 0) {
+//
 //                                        Realm realm = Realm.getInstance(MainActivity.this);
-//                                        realm.cancelTransaction();
-                                    }
-                                }
-                            }).show();
+////                                        realm.cancelTransaction();
+//                                    }
+//                                }
+//                            })
+                            .show();
 
                     break;
                 case Activity.RESULT_CANCELED:

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.tuccro.notes.R;
 import com.tuccro.notes.entity.Note;
 import com.tuccro.notes.ui.activities.EditNoteActivity;
+import com.tuccro.notes.util.DateFormatter;
 
 import java.util.List;
 
@@ -55,6 +56,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteHolder> 
                 activity.startActivity(intent);
             }
         });
+
+        DateFormatter dateFormatter = new DateFormatter(note.getCreateTime(), activity);
+        holder.date.setText(dateFormatter.getDateOrDay());
     }
 
     @Override
