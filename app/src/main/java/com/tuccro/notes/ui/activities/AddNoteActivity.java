@@ -3,7 +3,9 @@ package com.tuccro.notes.ui.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 
+import com.tuccro.notes.R;
 import com.tuccro.notes.entity.Note;
 
 import io.realm.Realm;
@@ -20,6 +22,10 @@ public class AddNoteActivity extends NoteBaseActivity {
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_add_note);
+        toolbar.setOverflowIcon(getResources().getDrawable(R.drawable.ic_attach_file_white_36dp));
+        setSupportActionBar(toolbar);
 
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if ("text/plain".equals(type)) {

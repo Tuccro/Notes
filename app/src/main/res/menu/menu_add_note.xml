@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:icon="@drawable/ic_note_add_white_24dp"
+    tools:context=".ui.activities.AddNoteActivity">
+
+    <item
+        android:id="@+id/action_add_image"
+        android:orderInCategory="100"
+        android:title="@string/add_image"
+        app:showAsAction="never" />
+</menu>
