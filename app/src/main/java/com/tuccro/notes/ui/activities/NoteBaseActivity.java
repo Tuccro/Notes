@@ -68,6 +68,7 @@ public abstract class NoteBaseActivity extends AppCompatActivity {
             returnResult(saveNote());
         }
         super.onBackPressed();
+        overridePendingTransition(R.anim.trans_right_in, R.anim.trans_right_out);
     }
 
     @Override

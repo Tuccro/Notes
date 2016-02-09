@@ -8,14 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.tuccro.notes.R;
-import com.tuccro.notes.entity.Note;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.realm.Realm;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onFabClick() {
         Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
         startActivityForResult(intent, AddNoteActivity.REQUEST_CODE);
+        overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out);
     }
 
     @Override
